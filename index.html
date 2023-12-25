@@ -4,15 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Artem Soundboard</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+  
+      .soundboard {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        max-width: 600px;
+      }
+  
+      .button {
+        flex: 1 0 calc(33.33% - 10px);
+        text-align: center;
+        padding: 15px;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+  
+      .sound-button:hover {
+        background-color: #2980b9;
+      }
+    </style>
   </head>
   <body>
-    <div class="flex-container">
-      <button onclick="sound('eeee.mp3')">Eeee</button>
-      <button onclick="sound('yay.mp3')">Yay</button>
-      <button onclick="sound('meow.mp3')">Meow</button>
-      <button onclick="sound('uhhhh.mp3')">uhhh</button>
-      <button onclick="sound('woohoo.mp3')">Woohoo!!</button>
-      <button onclick="sound('yippee.mp3')">yippee!!</button>
+    <div class="soundboard">
+      <button type="button" class="button" onclick="sound('eeee.mp3')">Eeee</button>
+      <button type="button" class="button" onclick="sound('yay.mp3')">Yay</button>
+      <button type="button" class="button" onclick="sound('meow.mp3')">Meow</button>
+      <button type="button" class="button" onclick="sound('uhhhh.mp3')">uhhh</button>
+      <button type="button" class="button" onclick="sound('woohoo.mp3')">Woohoo!!</button>
+      <button type="button" class="button" onclick="sound('yippee.mp3')">yippee!!</button>
     </div>
 
     <script src="script.js"></script>
